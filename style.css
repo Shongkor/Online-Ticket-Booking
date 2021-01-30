@@ -63,7 +63,7 @@ nav ul li a:hover, a.active{
     border-radius: 5px;
     float: right;
     width: 80%;
-    margin: 50px 0px 0px 80px;
+    margin: 15px 0px 15px 80px;
 }
 .booking-form h3{
     margin: 10px 0px;
@@ -121,4 +121,23 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+#secondPage{
+    display:none;
+    border-radius: 40px;
+    padding: 150px;
+}
+#secondPage h1{
+    font-size: 25px;
+    font-weight: 600;
+    color:green;
+    
+}
+#secondPage h1 i{
+    color: #52AF3A;
+}
+
+#secondPage p{
+    font-size: 25px;
+    color: slateblue;
 }
