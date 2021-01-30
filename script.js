@@ -5,6 +5,7 @@ function increment(parameter) {
     document.getElementById(parameter).value = inputValue;
     amountCalculation();
 }
+
 function decrement(parameter) {
     var inputValue = document.getElementById(parameter).value;
     inputValue = parseInt(inputValue);
@@ -24,10 +25,11 @@ function amountCalculation() {
     const total = costingCalculation();
     document.getElementById("total").innerText = total[2];
 }
+
 function costingCalculation() {
-    const parameterFirstClass = parseInt(document.getElementById("parameterFirstClass").value);
-    const parameterEconomy = parseInt(document.getElementById("parameterEconomy").value);
-    var subtotalValue = ((parameterFirstClass * 150) + (parameterEconomy * 100));
+    const firstClassInput = parseInt(document.getElementById("firstClassInput").value);
+    const EconomyClassInput = parseInt(document.getElementById("EconomyClassInput").value);
+    var subtotalValue = ((firstClassInput * 150) + (EconomyClassInput * 100));
     var vatValue = subtotalValue * 0.1;
     var totalValue = subtotalValue + vatValue;
     return [subtotalValue, vatValue, totalValue];
@@ -36,25 +38,25 @@ function costingCalculation() {
 
 const increaseFirstClass = document.getElementById("increaseFirstClass");
 increaseFirstClass.addEventListener("click", function () {
-    increment("parameterFirstClass");
+    increment("firstClassInput");
 })
 // Economy + sign;
 
 const increaseEconomy = document.getElementById("increaseEconomy");
 increaseEconomy.addEventListener("click", function () {
-    increment("parameterEconomy");
+    increment("EconomyClassInput");
 });
 // first class - sign;
 
 const decreaseFirstClass = document.getElementById("decreaseFirstClass");
 decreaseFirstClass.addEventListener("click", function () {
-    decrement("parameterFirstClass");
+    decrement("firstClassInput");
 })
 // Economy - sign
 
 const decreaseEconomy = document.getElementById("decreaseEconomy");
 decreaseEconomy.addEventListener("click", function () {
-    decrement("parameterEconomy");
+    decrement("EconomyClassInput");
 })
 //"Book Now" Button.
 
@@ -67,9 +69,9 @@ bookBtn.addEventListener("click", function () {
     const body = document.getElementById("body");
     body.style.background = "none";
 
-    var parameterFirstClassTicket = document.getElementById("parameterFirstClass").value;
-    document.getElementById("firstClassTicket").innerText = parameterFirstClassTicket + " "
+    var firstClassInputTicket = document.getElementById("firstClassInput").value;
+    document.getElementById("firstClassTicket").innerText = firstClassInputTicket + " "
 
-    var parameterEconomyTicket = document.getElementById("parameterEconomy").value;
-    document.getElementById("economyTicket").innerText = parameterEconomyTicket + " "
+    var EconomyClassInputTicket = document.getElementById("EconomyClassInput").value;
+    document.getElementById("economyTicket").innerText = EconomyClassInputTicket + " "
 })
