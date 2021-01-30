@@ -124,7 +124,6 @@ nav ul li a:hover, a.active{
 }
 #secondPage{
     display:none;
-    border-radius: 40px;
     padding: 150px;
 }
 #secondPage h1{
@@ -134,10 +133,10 @@ nav ul li a:hover, a.active{
     
 }
 #secondPage h1 i{
-    color: #52AF3A;
+    color: #3d9c26;
 }
 
 #secondPage p{
-    font-size: 25px;
-    color: slateblue;
+    font-size: 20px;
+    color: rgb(48, 29, 175);
 }
